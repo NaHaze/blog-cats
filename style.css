@@ -7,13 +7,13 @@
 :root {
   font-size: 62.5%;
   
-  --brand-primary: #A7C6ED;
-  --brand-secondary: #F4FCFF;
-  --color-title: #202024;
-  --color-text: #121214;
-  --color-white: #ffffff;
+  --brand-primary: hsl(213, 66%, 79%);
+  --brand-secondary: hsl(196, 100%, 98%);
+  --color-title: hsl(240, 6%, 13%);
+  --color-text: hsl(240, 5%, 7%);
+  --color-white: hsl(0, 0%, 100%);
 
-  --color-text-search:#387E96;
+  --color-text-search:hsl(195, 46%, 40%);
 }
 html, input, h1, p {
   font: 400 1.6rem/160% "Mulish", sans-serif;
@@ -154,6 +154,70 @@ footer p {
   padding: 1.6rem;
   font-weight: 600; 
   color: var(--color-text-search);
+}
+
+@media (width > 1280px) {
+  img {
+    border-radius: 5px;
+  }
+  #app {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+
+    gap: 4rem 4.5rem;
+  }
+  header .container,
+  .container {
+    max-width: initial;
+    margin-inline: initial;
+    margin: initial;
+    padding: initial;
+  }
+  .items-wrapper{
+    max-width: initial;
+    margin: initial;
+    margin-inline: initial;
+    padding: 4.4rem 3.4rem 3.9rem 10.9rem;
+
+  }
+  header {
+    grid-area: header;
+  }
+  header .container {
+    max-width: 121.7rem;
+    margin-inline: auto;
+  }
+  header form {
+    flex: 1;
+  }
+  header form input {
+    width: 100%;
+
+  }
+  main {
+    grid-area: main;
+  }
+  main .items-wrapper p{
+    max-width: 8.0rem;
+    margin-left: auto;
+  }
+  main .image-principal {
+    width: 803px;
+    height: 405px;
+  }
+  aside {
+    grid-area: aside;
+  }
+  aside .items-wrapper {
+   max-width: 38.4rem;     
+       
+  }
+  footer {
+    grid-area: footer;
+  }
 }
 
 
